@@ -27,7 +27,8 @@ sudo pacman -S --noconfirm --needed python-pywal
 ##Installing system build
 
 echo "Installing custom suckless build and dot files"
-~/ git clone https://github.com/ImprovedPasta/linux-setup.git
+(cd $HOME/$(whoami)/)
+git clone https://github.com/ImprovedPasta/linux-setup.git
 sudo pacman -S --noconfirm --needed sxhkd
 
 echo "Moving dirs to .config"
