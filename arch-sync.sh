@@ -41,7 +41,7 @@ cp -r ~/.src/sxhkd ~/.config
 echo "Installing Yay aur package manager"
 mkdir ~/programs
 git clone https://aur.archlinux.org/yay.git ~/programs/
-(cd ~/programs/yay && makepkg -si )
+(cd ~/programs/ && makepkg -si )
 
 ##Installing Applications
 
