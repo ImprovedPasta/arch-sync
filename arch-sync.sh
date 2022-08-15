@@ -27,14 +27,13 @@ sudo pacman -S --noconfirm --needed python-pywal
 ##Installing system build
 
 echo "Installing custom suckless build and dot files"
-(cd $HOME/$(whoami)/)
-git clone https://github.com/ImprovedPasta/linux-setup.git
+git clone https://github.com/ImprovedPasta/linux-setup.git ~/
 sudo pacman -S --noconfirm --needed sxhkd
 
 echo "Moving dirs to .config"
 mkdir ~/.config
-cp ~/suckless ~/.config
-cp ~/sxhkd ~/.config
+cp -r ~/suckless ~/.config
+cp -r ~/sxhkd ~/.config
 
 echo "Installing Applications"
 sudo pacman -S --noconfirm --needed firefox vim qbittorrent discord nautilus gnome-disk-utlity
