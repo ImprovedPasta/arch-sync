@@ -24,13 +24,6 @@ sudo pacman -S --noconfirm --needed ttf-jetbrains-mono ttf-dejavu ttf-liberation
 echo "Installing pywal"
 sudo pacman -S --noconfirm --needed python-pywal
 
-##Installing yay
-
-echo "Installing Yay aur package manager"
-mkdir ~/programs
-git clone https://aur.archlinux.org/yay.git ~/programs/
-(cd ~/programs/yay && makepkg -si )
-
 ##Installing system build
 
 echo "Installing suckless build and dot files"
@@ -42,6 +35,15 @@ echo "Moving dirs to .config"
 mkdir ~/.config
 cp -r ~/.src/suckless ~/.config
 cp -r ~/.src/sxhkd ~/.config
+
+##Installing yay
+
+echo "Installing Yay aur package manager"
+mkdir ~/programs
+git clone https://aur.archlinux.org/yay.git ~/programs/
+(cd ~/programs/yay && makepkg -si )
+
+##Installing Applications
 
 echo "Installing Applications"
 sudo pacman -S --noconfirm --needed firefox vim qbittorrent discord nautilus 
