@@ -40,4 +40,4 @@ sudo pacman -S --noconfirm --needed firefox vim qbittorrent discord nautilus gno
 
 echo "Setup Completed Successfully"
 echo "Compile suckless and generate wal cache and restart!"
-ech
+
