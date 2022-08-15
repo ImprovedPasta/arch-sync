@@ -24,9 +24,16 @@ sudo pacman -S --noconfirm --needed ttf-jetbrains-mono ttf-dejavu ttf-liberation
 echo "Installing pywal"
 sudo pacman -S --noconfirm --needed python-pywal
 
+##Installing yay
+
+echo "Installing Yay aur package manager"
+mkdir ~/programs
+git clone https://aur.archlinux.org/yay.git ~/programs/
+(cd ~/programs/yay && makepkg -si )
+
 ##Installing system build
 
-echo "Installing custom suckless build and dot files"
+echo "Installing suckless build and dot files"
 mkdir ~/.src
 git clone https://github.com/ImprovedPasta/linux-setup.git ~/.src
 sudo pacman -S --noconfirm --needed sxhkd
@@ -37,7 +44,8 @@ cp -r ~/.src/suckless ~/.config
 cp -r ~/.src/sxhkd ~/.config
 
 echo "Installing Applications"
-sudo pacman -S --noconfirm --needed firefox vim qbittorrent discord nautilus gnome-disk-utlity
+sudo pacman -S --noconfirm --needed firefox vim qbittorrent discord nautilus 
+yay -S --noconfirm --needed gnome-disk-utility
 
 echo "Setup Completed Successfully"
 echo "Compile suckless and generate wal cache and restart!"
